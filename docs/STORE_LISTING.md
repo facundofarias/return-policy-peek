@@ -115,6 +115,16 @@ https://github.com/facundofarias/return-policy-peek/blob/main/PRIVACY.md
 https://rumbolabs.net/
 ```
 
+## Test instructions (for reviewers)
+
+- **Credentials:** leave Username and Password **blank** — the extension has no
+  login, account, or authentication of any kind.
+- **Additional instructions** (498/500 chars):
+
+```
+No login or account required. Requires Chrome 138+ with built-in AI (Gemini Nano). If no summary appears, enable chrome://flags/#prompt-api-for-gemini-nano and #optimization-guide-on-device-model (Enabled BypassPerfRequirement), relaunch, and let the model download on first use. To test: open any store page (e.g. https://www.sivasdescalzo.com) and click the toolbar icon -> the return policy is summarized on-device. Optional: "Check reviews on returns" opens the store's Trustpilot page briefly.
+```
+
 ---
 
 ## Image assets (upload in the dashboard)
