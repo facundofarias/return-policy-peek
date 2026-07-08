@@ -61,7 +61,7 @@ MARKET = {
             "<strong>On the plus side</strong> — others had smooth, hassle-free refunds.",
         ],
         "source": "Source: sivasdescalzo.com",
-        "version": "Version 0.2.4",
+        "version": "Version 1.0.0",
     },
     "es": {
         "s1_eyebrow": "🛍️ Un clic",
@@ -88,7 +88,7 @@ MARKET = {
             "<strong>Lo positivo</strong>: otros tuvieron reembolsos rápidos y sin problemas.",
         ],
         "source": "Fuente: sivasdescalzo.com",
-        "version": "Versión 0.2.4",
+        "version": "Versión 1.0.0",
     },
     "fr": {
         "s1_eyebrow": "🛍️ Un clic",
@@ -115,7 +115,7 @@ MARKET = {
             "<strong>Côté positif</strong> : d'autres ont été remboursés sans souci.",
         ],
         "source": "Source : sivasdescalzo.com",
-        "version": "Version 0.2.4",
+        "version": "Version 1.0.0",
     },
 }
 
