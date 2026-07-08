@@ -10,8 +10,9 @@ your browser. Works in **English, Spanish, and French**.
 2. An injected detector (`src/detect.js`) scores ecommerce signals (schema.org `Product`,
    `og:type`, cart buttons/links, prices) and finds the best **return/refund policy link**
    in EN/ES/FR (matching link text, `aria-label`, and URL, accent-insensitive).
-3. The popup fetches that policy page (extension `host_permissions` bypass CORS) and
-   extracts the readable text (`src/extract.js`).
+3. The policy page is fetched **from within the active tab** (injected via `activeTab` +
+   `scripting`), so it works same-origin without any broad host permission, then the readable
+   text is extracted (`src/extract.js`).
 4. `src/ai.js` summarizes it on-device: **Prompt API → Summarizer API → raw text**.
    The prompt asks for the shopper essentials — return window, condition, refund method &
    timing, who pays return shipping, exchanges, exclusions — answered in the page's language.
@@ -46,7 +47,7 @@ and it's disclosed at the point of use.
 ## Project layout
 
 ```
-manifest.json          MV3 manifest (activeTab + scripting + storage, host_permissions)
+manifest.json          MV3 manifest (activeTab + scripting + storage; host: *.trustpilot.com)
 popup.html/.css/.js     UI + orchestration (runs in the extension page context)
 src/detect.js           Injected page detector: ecommerce + policy-link discovery
 src/extract.js          HTML → readable text (DOMParser, main-content aware)

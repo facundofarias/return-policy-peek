@@ -136,17 +136,18 @@ return/refund policy on the user's device with a single click.
 ## Permission justifications (required)
 
 - **activeTab** — Used only when the user clicks the extension. It lets the
-  extension read the current store page to detect it is a store and locate the
-  return/refund policy link.
+  extension read the current store page to detect it is a store, locate the
+  return/refund policy link, and fetch that policy page from within the tab
+  itself (no broad host access needed).
 - **scripting** — Injects a small read-only detector into the active tab to find
-  the policy link, and (only on the opt-in "Check reviews" action) reads the
+  and read the policy, and (only on the opt-in "Check reviews" action) reads the
   publicly rendered reviews from the store's Trustpilot page.
 - **storage** — Caches summaries in `chrome.storage.session` (in-memory only) so
   repeat clicks are instant. Cleared when the browser closes.
-- **Host permissions (http/https)** — Needed to fetch the store's own
-  return-policy page so it can be summarized, and (only on request) to open the
-  store's public Trustpilot page. Broad host access is required because the user
-  may shop on any store domain.
+- **Host permission `*://*.trustpilot.com/*`** — Used only for the opt-in
+  "Check reviews on returns" action, to read a store's public Trustpilot page.
+  The extension requests no other host access; store pages are read via
+  `activeTab` on your click.
 
 ## Data usage disclosures (Privacy practices tab)
 

@@ -48,11 +48,12 @@ We do not sell, rent, or share any data, because we do not collect any.
 
 ## Permissions, briefly
 
-- `activeTab`, `scripting` — read the page you're on to find and read its return
-  policy (and, on request, read the public Trustpilot page).
+- `activeTab`, `scripting` — only when you click the extension: read the page
+  you're on to find its return policy and fetch that policy page (from within
+  the tab itself, so no broad host access is needed).
 - `storage` — the in-memory session cache described above.
-- Host access (`http`/`https`) — fetch the store's return-policy page and, on
-  request, its public Trustpilot page.
+- Host access to `*.trustpilot.com` — used only for the opt-in
+  "Check reviews on returns" action, to read a store's public Trustpilot page.
 
 ## Contact
 

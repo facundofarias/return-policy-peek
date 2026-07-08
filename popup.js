@@ -260,12 +260,27 @@ async function getActiveTab() {
   return tab;
 }
 
-async function fetchPolicyHtml(url) {
-  const res = await fetch(url, { credentials: "omit", redirect: "follow" });
-  const ct = (res.headers.get("content-type") || "").toLowerCase();
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  if (!ct.includes("html") && ct !== "") throw new Error(`non-html: ${ct}`);
-  return res.text();
+// Fetch the return-policy page from INSIDE the active tab (via activeTab +
+// scripting) rather than from the extension origin. Return policies are almost
+// always same-origin to the store page, so this needs no host permission and
+// avoids requesting broad host access. Cross-origin policy pages (rare — e.g. a
+// help subdomain) hit CORS and yield "", and we degrade to the "view policy"
+// link.
+async function fetchPolicyHtml(tabId, url) {
+  const [{ result } = {}] = await chrome.scripting.executeScript({
+    target: { tabId },
+    args: [url],
+    func: (u) =>
+      fetch(u, { credentials: "omit", redirect: "follow" })
+        .then((r) => {
+          const ct = (r.headers.get("content-type") || "").toLowerCase();
+          if (!r.ok) return "";
+          if (!ct.includes("html") && ct !== "") return "";
+          return r.text();
+        })
+        .catch(() => ""),
+  });
+  return result || "";
 }
 
 async function run() {
@@ -314,7 +329,7 @@ async function run() {
   if (policyUrl && policyUrl !== detection.currentUrl) {
     setStatus(t("fetchingPolicy"));
     try {
-      const html = await fetchPolicyHtml(policyUrl);
+      const html = await fetchPolicyHtml(tab.id, policyUrl);
       policyText = extractReadableText(html);
     } catch (e) {
       policyText = "";

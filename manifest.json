@@ -2,11 +2,11 @@
   "manifest_version": 3,
   "name": "__MSG_extName__",
   "description": "__MSG_extDesc__",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "default_locale": "en",
   "minimum_chrome_version": "138",
   "permissions": ["activeTab", "scripting", "storage"],
-  "host_permissions": ["http://*/*", "https://*/*"],
+  "host_permissions": ["*://*.trustpilot.com/*"],
   "background": {
     "service_worker": "background.js",
     "type": "module"
