@@ -1,0 +1,54 @@
+{
+  "extName": { "message": "Return Policy Peek" },
+  "extDesc": { "message": "See any store's return policy in one click, summarized on-device. No login, nothing leaves your browser." },
+
+  "statusChecking": { "message": "Checking this page…" },
+  "fetchingPolicy": { "message": "Reading the return policy…" },
+  "summarizing": { "message": "Summarizing with on-device AI…" },
+  "downloadingModel": {
+    "message": "Downloading on-device AI model… $pct$%",
+    "placeholders": { "pct": { "content": "$1" } }
+  },
+
+  "storeDetected": { "message": "Store detected" },
+  "noStoreDetected": { "message": "Not clearly a store" },
+
+  "returnPolicyHeading": { "message": "Return policy" },
+  "viewFullPolicy": { "message": "View full policy" },
+  "sourceLabel": { "message": "Source:" },
+
+  "couldNotRead": { "message": "Couldn't read the return policy page. Open it directly below." },
+  "noPolicyFound": { "message": "Couldn't find a return policy link on this page." },
+  "noPolicyInText": { "message": "That page didn't appear to contain a return policy. Showing the page text so you can check." },
+  "aiUnavailable": { "message": "On-device AI isn't available, so here's the return policy text instead." },
+  "cannotRunHere": { "message": "This page can't be analyzed. Open a store page and try again." },
+  "errorGeneric": { "message": "Something went wrong. Please try again." },
+
+  "privacyNote": { "message": "Summarized on your device. Nothing leaves your browser." },
+  "madeBy": { "message": "Made by" },
+  "cachedNote": { "message": "cached" },
+
+  "aboutTitle": { "message": "About" },
+  "aboutTagline": { "message": "See any store's return policy in one click." },
+  "aboutPrivacy": { "message": "Privacy-first: policies are summarized on your device by Chrome's built-in AI. Nothing you browse leaves your browser." },
+  "aboutNoBackend": { "message": "No backend, no accounts, no tracking — there are no servers and no analytics behind this extension." },
+  "aboutLanguages": { "message": "Works in English, Spanish, and French." },
+  "aboutOnDevice": { "message": "Free and instant — summaries are cached locally for repeat visits." },
+  "aboutOpenSource": { "message": "Open source, so anyone can inspect exactly what it does." },
+  "versionLabel": { "message": "Version" },
+  "aboutBack": { "message": "← Back" },
+
+  "checkReviews": { "message": "Check reviews on returns" },
+  "checkingReviews": { "message": "Checking Trustpilot reviews… (a tab may open briefly)" },
+  "reviewsHeading": { "message": "What shoppers say about returns" },
+  "reviewsCount": {
+    "message": "Based on $count$ Trustpilot review(s) mentioning returns",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "reviewsViewSource": { "message": "View on Trustpilot" },
+  "reviewsNoProfile": { "message": "No public Trustpilot reviews found for this store." },
+  "reviewsNoReturns": { "message": "No reviews specifically about returns or refunds were found." },
+  "reviewsError": { "message": "Couldn't load reviews right now. Please try again later." },
+  "reviewsAiRaw": { "message": "Sample reviews about returns:" },
+  "reviewsPrivacyNote": { "message": "Reads the store's public Trustpilot page — only when you tap this." }
+}

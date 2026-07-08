@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-header">
+    <img src="icons/icon32.png" alt="" class="app-logo" width="24" height="24" />
+    <h1 class="app-title" data-i18n="extName">Return Policy Peek</h1>
+    <button id="about-toggle" class="icon-btn" type="button" aria-label="About" title="About">ⓘ</button>
+  </header>
+
+  <main id="content" class="content">
+    <div id="view-main">
+      <div id="status" class="status">
+        <span class="spinner" aria-hidden="true"></span>
+        <span id="status-text" class="status-text" data-i18n="statusChecking">Checking this page…</span>
+      </div>
+
+      <div id="result" class="result" hidden></div>
+    </div>
+
+    <section id="about" class="about" hidden>
+      <h2 class="about-title" data-i18n="aboutTitle">About</h2>
+      <p class="about-tagline" data-i18n="aboutTagline">See any store's return policy in one click.</p>
+      <ul class="about-list">
+        <li><span class="about-ico">🔒</span><span data-i18n="aboutPrivacy">Privacy-first: policies are summarized on your device by Chrome's built-in AI. Nothing you browse leaves your browser.</span></li>
+        <li><span class="about-ico">🚫</span><span data-i18n="aboutNoBackend">No backend, no accounts, no tracking — there are no servers and no analytics behind this extension.</span></li>
+        <li><span class="about-ico">🌐</span><span data-i18n="aboutLanguages">Works in English, Spanish, and French.</span></li>
+        <li><span class="about-ico">⚡</span><span data-i18n="aboutOnDevice">Free and instant — summaries are cached locally for repeat visits.</span></li>
+        <li><span class="about-ico">&lt;/&gt;</span><span data-i18n="aboutOpenSource">Open source, so anyone can inspect exactly what it does.</span></li>
+      </ul>
+      <p class="about-madeby">
+        <span data-i18n="madeBy">Made by</span>
+        <a href="https://rumbolabs.net/" target="_blank" rel="noopener noreferrer">Rumbo Labs</a>
+      </p>
+      <p class="about-version"><span data-i18n="versionLabel">Version</span> <span id="version"></span></p>
+      <button id="about-back" class="btn" type="button" data-i18n="aboutBack">← Back</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span class="privacy" data-i18n="privacyNote">Summarized on your device. Nothing leaves your browser.</span>
+    <a class="credit" href="https://rumbolabs.net/" target="_blank" rel="noopener noreferrer">
+      <span data-i18n="madeBy">Made by</span> Rumbo Labs
+    </a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

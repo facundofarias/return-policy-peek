@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Build artifacts
+dist/
+
+# Node (not used at runtime, but just in case)
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp

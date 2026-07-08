@@ -1,0 +1,54 @@
+{
+  "extName": { "message": "Vistazo a Devoluciones" },
+  "extDesc": { "message": "Consulta la política de devoluciones de cualquier tienda con un clic, resumida en tu dispositivo. Sin iniciar sesión y sin que nada salga de tu navegador." },
+
+  "statusChecking": { "message": "Analizando esta página…" },
+  "fetchingPolicy": { "message": "Leyendo la política de devoluciones…" },
+  "summarizing": { "message": "Resumiendo con IA en el dispositivo…" },
+  "downloadingModel": {
+    "message": "Descargando el modelo de IA local… $pct$%",
+    "placeholders": { "pct": { "content": "$1" } }
+  },
+
+  "storeDetected": { "message": "Tienda detectada" },
+  "noStoreDetected": { "message": "No parece una tienda" },
+
+  "returnPolicyHeading": { "message": "Política de devoluciones" },
+  "viewFullPolicy": { "message": "Ver política completa" },
+  "sourceLabel": { "message": "Fuente:" },
+
+  "couldNotRead": { "message": "No se pudo leer la página de devoluciones. Ábrela directamente abajo." },
+  "noPolicyFound": { "message": "No se encontró un enlace a la política de devoluciones en esta página." },
+  "noPolicyInText": { "message": "Esa página no parece contener una política de devoluciones. Mostramos el texto para que lo revises." },
+  "aiUnavailable": { "message": "La IA en el dispositivo no está disponible, así que aquí tienes el texto de la política de devoluciones." },
+  "cannotRunHere": { "message": "Esta página no se puede analizar. Abre la página de una tienda e inténtalo de nuevo." },
+  "errorGeneric": { "message": "Algo salió mal. Inténtalo de nuevo." },
+
+  "privacyNote": { "message": "Resumido en tu dispositivo. Nada sale de tu navegador." },
+  "madeBy": { "message": "Creado por" },
+  "cachedNote": { "message": "en caché" },
+
+  "aboutTitle": { "message": "Acerca de" },
+  "aboutTagline": { "message": "Consulta la política de devoluciones de cualquier tienda con un clic." },
+  "aboutPrivacy": { "message": "Privacidad ante todo: las políticas se resumen en tu dispositivo con la IA integrada de Chrome. Nada de lo que navegas sale de tu navegador." },
+  "aboutNoBackend": { "message": "Sin backend, sin cuentas, sin rastreo: no hay servidores ni analíticas detrás de esta extensión." },
+  "aboutLanguages": { "message": "Funciona en inglés, español y francés." },
+  "aboutOnDevice": { "message": "Gratis e instantáneo: los resúmenes se guardan localmente para visitas repetidas." },
+  "aboutOpenSource": { "message": "De código abierto, para que cualquiera pueda comprobar exactamente qué hace." },
+  "versionLabel": { "message": "Versión" },
+  "aboutBack": { "message": "← Volver" },
+
+  "checkReviews": { "message": "Ver opiniones sobre devoluciones" },
+  "checkingReviews": { "message": "Consultando opiniones de Trustpilot… (puede abrirse una pestaña un momento)" },
+  "reviewsHeading": { "message": "Qué dicen los clientes sobre las devoluciones" },
+  "reviewsCount": {
+    "message": "Según $count$ opinión(es) de Trustpilot que mencionan devoluciones",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "reviewsViewSource": { "message": "Ver en Trustpilot" },
+  "reviewsNoProfile": { "message": "No se encontraron opiniones públicas de Trustpilot para esta tienda." },
+  "reviewsNoReturns": { "message": "No se encontraron opiniones específicas sobre devoluciones o reembolsos." },
+  "reviewsError": { "message": "No se pudieron cargar las opiniones ahora. Inténtalo de nuevo más tarde." },
+  "reviewsAiRaw": { "message": "Ejemplos de opiniones sobre devoluciones:" },
+  "reviewsPrivacyNote": { "message": "Lee la página pública de Trustpilot de la tienda, solo cuando pulsas aquí." }
+}
