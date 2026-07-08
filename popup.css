@@ -173,6 +173,34 @@ body {
   color: var(--ok);
   text-transform: none;
 }
+.summary-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.summary-head h2 { margin: 0; }
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rating-good { background: #ecfdf5; color: #059669; }
+.rating-medium { background: #fffbeb; color: #b45309; }
+.rating-bad { background: #fef2f2; color: #dc2626; }
+@media (prefers-color-scheme: dark) {
+  .rating-good { background: #052e2b; color: #34d399; }
+  .rating-medium { background: #241a05; color: #fbbf24; }
+  .rating-bad { background: #2a1113; color: #f87171; }
+}
+
 .summary-body ul { margin: 0; padding-left: 18px; }
 .summary-body li { margin: 4px 0; }
 .summary-body p { margin: 6px 0; }

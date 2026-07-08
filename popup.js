@@ -120,7 +120,13 @@ function reviewsContainer() {
   return `<div id="complaints" class="complaints"></div>`;
 }
 
-function showSummary(detection, summary, url, engine, fromCache = false) {
+function ratingPill(rating) {
+  if (!["good", "medium", "bad"].includes(rating)) return "";
+  const icon = { good: "🟢", medium: "🟡", bad: "🔴" }[rating];
+  return `<span class="rating-pill rating-${rating}" title="${escapeHtml(t("ratingWhat"))}">${icon} ${escapeHtml(t("rating_" + rating))}</span>`;
+}
+
+function showSummary(detection, summary, url, engine, fromCache = false, rating = null) {
   hideStatus();
   const box = resultBox();
   box.hidden = false;
@@ -130,7 +136,10 @@ function showSummary(detection, summary, url, engine, fromCache = false) {
   box.innerHTML =
     badge(detection) +
     `<div class="summary">
-       <h2>${escapeHtml(t("returnPolicyHeading"))}${cachedTag}</h2>
+       <div class="summary-head">
+         <h2>${escapeHtml(t("returnPolicyHeading"))}${cachedTag}</h2>
+         ${ratingPill(rating)}
+       </div>
        <div class="summary-body">${renderSummaryHtml(summary)}</div>
      </div>
      <div class="actions">${policyLinkButton(url)}${reviewsButton()}</div>${reviewsContainer()}` +
@@ -318,7 +327,7 @@ async function run() {
   const cacheKey = detection.policyUrl || detection.currentUrl;
   const cached = await getCached(cacheKey);
   if (cached?.summary) {
-    showSummary(detection, cached.summary, cached.policyUrl || cacheKey, cached.engine, true);
+    showSummary(detection, cached.summary, cached.policyUrl || cacheKey, cached.engine, true, cached.rating);
     return;
   }
 
@@ -366,8 +375,8 @@ async function run() {
   });
 
   if (result.source === "ai" && result.summary) {
-    showSummary(detection, result.summary, policyUrl, result.engine);
-    setCached(cacheKey, { summary: result.summary, engine: result.engine, policyUrl });
+    showSummary(detection, result.summary, policyUrl, result.engine, false, result.rating);
+    setCached(cacheKey, { summary: result.summary, engine: result.engine, policyUrl, rating: result.rating || null });
   } else {
     showRaw(detection, policyText, policyUrl, "aiUnavailable");
   }

@@ -28,6 +28,11 @@
   "madeBy": { "message": "Créé par" },
   "cachedNote": { "message": "en cache" },
 
+  "rating_good": { "message": "Retours favorables" },
+  "rating_medium": { "message": "Retours corrects" },
+  "rating_bad": { "message": "Retours défavorables" },
+  "ratingWhat": { "message": "À quel point cette politique de retour est avantageuse, évaluée sur votre appareil." },
+
   "aboutTitle": { "message": "À propos" },
   "aboutTagline": { "message": "Consultez la politique de retour de n'importe quelle boutique en un clic." },
   "aboutPrivacy": { "message": "Confidentialité avant tout : les politiques sont résumées sur votre appareil par l'IA intégrée de Chrome. Rien de ce que vous consultez ne quitte votre navigateur." },

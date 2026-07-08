@@ -55,6 +55,7 @@ detection.
 
 WHY YOU'LL LIKE IT
 • One click — return policy summarized instantly
+• Quality at a glance — a Good / Fair / Poor returns rating from the policy
 • Private by design — on-device AI, no backend, no accounts, no tracking
 • Optional review check — see returns-related complaints before you buy
 • Free and open source — anyone can inspect exactly what it does
@@ -86,6 +87,7 @@ FUNCIONA EN INGLÉS, ESPAÑOL Y FRANCÉS, tanto la interfaz como la detección d
 
 POR QUÉ TE GUSTARÁ
 • Un clic: la política de devoluciones resumida al instante
+• Calidad de un vistazo: valoración de las devoluciones (buenas / regulares / malas)
 • Privada por diseño: IA en el dispositivo, sin backend, sin cuentas, sin seguimiento
 • Comprobación de opiniones opcional: mira las quejas sobre devoluciones antes de comprar
 • Gratis y de código abierto: cualquiera puede comprobar exactamente qué hace
@@ -115,6 +117,7 @@ FONCTIONNE EN ANGLAIS, ESPAGNOL ET FRANÇAIS, aussi bien l'interface que la dét
 
 POURQUOI VOUS ALLEZ L'AIMER
 • Un clic : la politique de retour résumée instantanément
+• Qualité en un coup d'œil : une note des retours (favorables / corrects / défavorables)
 • Confidentialité dès la conception : IA sur l'appareil, sans backend, sans compte, sans suivi
 • Vérification des avis optionnelle : voyez les plaintes sur les retours avant d'acheter
 • Gratuit et open source : chacun peut vérifier exactement ce qu'elle fait

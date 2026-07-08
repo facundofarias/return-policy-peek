@@ -104,21 +104,52 @@ async function runPrompt(system, user, language, onStatus) {
   return clean || null;
 }
 
+// Pull a leading "RATING: GOOD|MEDIUM|BAD" line (in any of our languages) out of
+// the model output, returning the normalized rating and the remaining summary.
+const RATING_WORDS = {
+  good: ["good", "bueno", "buena", "bon", "bonne"],
+  medium: ["medium", "medio", "media", "moyen", "moyenne", "regular"],
+  bad: ["bad", "malo", "mala", "mauvais", "mauvaise"],
+};
+
+function parseRating(text) {
+  const lines = text.split("\n");
+  for (let i = 0; i < Math.min(3, lines.length); i++) {
+    const m = lines[i].match(/rating\s*[:\-–]?\s*([a-zà-ÿ]+)/i);
+    if (!m) continue;
+    const word = m[1].toLowerCase();
+    for (const [rating, syns] of Object.entries(RATING_WORDS)) {
+      if (syns.includes(word)) {
+        const body = lines.slice(i + 1).join("\n").trim();
+        return { rating, body: body || text.trim() };
+      }
+    }
+  }
+  return { rating: null, body: text.trim() };
+}
+
 async function tryPromptApi(text, language, onStatus) {
   const langName = LANG_NAMES[language];
   const system =
     "You summarize an online store's return and refund policy for a shopper. " +
     "The text below was reached from the store's own returns/refunds link, so treat it as a return policy. " +
-    "Produce a short, scannable summary. " +
+    "FIRST, output exactly one line: 'RATING: GOOD', 'RATING: MEDIUM', or 'RATING: BAD' " +
+    "(use the English word). Rate how shopper-friendly the returns are: " +
+    "GOOD = free returns, a generous window, and easy refunds; " +
+    "BAD = the shopper pays return shipping, a short window, restocking fees, store-credit-only refunds, or many exclusions; " +
+    "MEDIUM = mixed or average. " +
+    "THEN, on the following lines, give a short, scannable summary. " +
     "Cover, only when present in the text: the return window (number of days), " +
     "item condition requirements, how refunds are issued and how long they take, " +
     "who pays for return shipping, exchanges, and any exclusions or non-returnable items. " +
     "Use at most 6 short bullet points, each starting with '- '. " +
     "Do not invent details that are not in the text. " +
-    `Respond in ${langName}.`;
+    `Respond in ${langName}, except the RATING word which stays English.`;
 
   const clean = await runPrompt(system, `Return/refund policy text:\n\n${text}`, language, onStatus);
-  return clean ? { summary: clean, engine: "prompt" } : null;
+  if (!clean) return null;
+  const { rating, body } = parseRating(clean);
+  return { summary: body, rating, engine: "prompt" };
 }
 
 async function trySummarizerApi(text, language, onStatus) {

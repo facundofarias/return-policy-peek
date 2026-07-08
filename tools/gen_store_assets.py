@@ -61,7 +61,7 @@ MARKET = {
             "<strong>On the plus side</strong> — others had smooth, hassle-free refunds.",
         ],
         "source": "Source: sivasdescalzo.com",
-        "version": "Version 1.0.1",
+        "version": "Version 1.1.0",
     },
     "es": {
         "s1_eyebrow": "🛍️ Un clic",
@@ -88,7 +88,7 @@ MARKET = {
             "<strong>Lo positivo</strong>: otros tuvieron reembolsos rápidos y sin problemas.",
         ],
         "source": "Fuente: sivasdescalzo.com",
-        "version": "Versión 1.0.1",
+        "version": "Versión 1.1.0",
     },
     "fr": {
         "s1_eyebrow": "🛍️ Un clic",
@@ -115,7 +115,7 @@ MARKET = {
             "<strong>Côté positif</strong> : d'autres ont été remboursés sans souci.",
         ],
         "source": "Source : sivasdescalzo.com",
-        "version": "Version 1.0.1",
+        "version": "Version 1.1.0",
     },
 }
 
@@ -181,9 +181,17 @@ def popup(loc, inner):
 def summary_popup(loc):
     m, k = MSG[loc], MARKET[loc]
     bullets = "".join(f"<li>{b}</li>" for b in k["sum"])
+    pill = (f'<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;'
+            f'font-weight:600;padding:3px 8px;border-radius:999px;background:#ecfdf5;'
+            f'color:#059669;white-space:nowrap;">🟢 {m["rating_good"]}</span>')
     return popup(loc, f"""
       <div class="badge">🛍️ {m["storeDetected"]}</div>
-      <div class="card"><h2>{m["returnPolicyHeading"]}</h2><ul>{bullets}</ul></div>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px;">
+          <h2 style="margin:0;">{m["returnPolicyHeading"]}</h2>{pill}
+        </div>
+        <ul>{bullets}</ul>
+      </div>
       <div class="actions"><span class="btn">↗ {m["viewFullPolicy"]}</span><span class="btn">🔎 {m["checkReviews"]}</span></div>
       <div class="source">{k["source"]}</div>
     """)

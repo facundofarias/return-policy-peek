@@ -28,6 +28,11 @@
   "madeBy": { "message": "Creado por" },
   "cachedNote": { "message": "en caché" },
 
+  "rating_good": { "message": "Buenas devoluciones" },
+  "rating_medium": { "message": "Devoluciones regulares" },
+  "rating_bad": { "message": "Malas devoluciones" },
+  "ratingWhat": { "message": "Lo favorable que es esta política de devoluciones, valorada en tu dispositivo." },
+
   "aboutTitle": { "message": "Acerca de" },
   "aboutTagline": { "message": "Consulta la política de devoluciones de cualquier tienda con un clic." },
   "aboutPrivacy": { "message": "Privacidad ante todo: las políticas se resumen en tu dispositivo con la IA integrada de Chrome. Nada de lo que navegas sale de tu navegador." },

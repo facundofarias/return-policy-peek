@@ -28,6 +28,11 @@
   "madeBy": { "message": "Made by" },
   "cachedNote": { "message": "cached" },
 
+  "rating_good": { "message": "Good returns" },
+  "rating_medium": { "message": "Fair returns" },
+  "rating_bad": { "message": "Poor returns" },
+  "ratingWhat": { "message": "How shopper-friendly this return policy is, rated on your device." },
+
   "aboutTitle": { "message": "About" },
   "aboutTagline": { "message": "See any store's return policy in one click." },
   "aboutPrivacy": { "message": "Privacy-first: policies are summarized on your device by Chrome's built-in AI. Nothing you browse leaves your browser." },
