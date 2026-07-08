@@ -68,6 +68,64 @@ you always get something useful.
 Made by Rumbo Labs — https://rumbolabs.net/
 ```
 
+## Detailed description — Spanish (es)
+
+Title and Summary auto-fill from the package (`Vistazo a Devoluciones` / the
+localized summary). Paste this into the **Description** field for Spanish:
+
+```
+Vistazo a Devoluciones te muestra la política de devoluciones y reembolsos de cualquier tienda online con un solo clic: sin iniciar sesión, sin cuenta y sin que nada salga de tu navegador.
+
+Cuando estés en la página de una tienda, haz clic en el icono. La extensión encuentra la política de devoluciones/reembolsos, la lee y te da un resumen breve y fácil de leer con lo que de verdad importa: el plazo de devolución, el estado en que debe estar el artículo, cómo y cuándo se emiten los reembolsos, quién paga el envío de la devolución, los cambios y cualquier exclusión.
+
+El resumen se genera EN TU DISPOSITIVO con la IA integrada de Chrome (Gemini Nano). El texto de la política nunca se envía a nosotros ni a terceros: no hay servidor backend ni ningún tipo de seguimiento.
+
+Opcional: pulsa «Ver opiniones sobre devoluciones» para ver qué dicen los clientes reales sobre las devoluciones y reembolsos de una tienda, resumido a partir de su página pública de Trustpilot. Es totalmente opcional: es la única vez que la extensión contacta con un tercero, y solo cuando tú lo pides.
+
+FUNCIONA EN INGLÉS, ESPAÑOL Y FRANCÉS, tanto la interfaz como la detección de la política.
+
+POR QUÉ TE GUSTARÁ
+• Un clic: la política de devoluciones resumida al instante
+• Privada por diseño: IA en el dispositivo, sin backend, sin cuentas, sin seguimiento
+• Comprobación de opiniones opcional: mira las quejas sobre devoluciones antes de comprar
+• Gratis y de código abierto: cualquiera puede comprobar exactamente qué hace
+• Trilingüe: inglés, español y francés
+
+REQUISITOS
+Chrome 138 o superior con el modelo de IA integrado disponible. Si la IA en el dispositivo no está disponible, la extensión te muestra igualmente el texto de la política y un enlace, para que siempre obtengas algo útil.
+
+Creado por Rumbo Labs — https://rumbolabs.net/
+```
+
+## Detailed description — French (fr)
+
+Title and Summary auto-fill from the package (`Aperçu des Retours` / the
+localized summary). Paste this into the **Description** field for French:
+
+```
+Aperçu des Retours vous montre la politique de retour et de remboursement de n'importe quelle boutique en ligne en un seul clic : sans connexion, sans compte et sans que rien ne quitte votre navigateur.
+
+Sur la page d'une boutique, cliquez sur l'icône. L'extension trouve la politique de retour/remboursement, la lit et vous en donne un résumé court et facile à parcourir, avec l'essentiel : le délai de retour, l'état exigé de l'article, comment et quand les remboursements sont effectués, qui paie les frais de retour, les échanges et les éventuelles exclusions.
+
+Le résumé est généré SUR VOTRE APPAREIL grâce à l'IA intégrée de Chrome (Gemini Nano). Le texte de la politique n'est jamais envoyé à nous ni à un tiers : il n'y a aucun serveur backend ni aucun suivi.
+
+Facultatif : appuyez sur « Voir les avis sur les retours » pour découvrir ce que de vrais clients disent des retours et remboursements d'une boutique, résumé à partir de sa page publique Trustpilot. C'est entièrement optionnel : c'est la seule fois où l'extension contacte un tiers, et uniquement à votre demande.
+
+FONCTIONNE EN ANGLAIS, ESPAGNOL ET FRANÇAIS, aussi bien l'interface que la détection de la politique.
+
+POURQUOI VOUS ALLEZ L'AIMER
+• Un clic : la politique de retour résumée instantanément
+• Confidentialité dès la conception : IA sur l'appareil, sans backend, sans compte, sans suivi
+• Vérification des avis optionnelle : voyez les plaintes sur les retours avant d'acheter
+• Gratuit et open source : chacun peut vérifier exactement ce qu'elle fait
+• Trilingue : anglais, espagnol et français
+
+CONFIGURATION REQUISE
+Chrome 138 ou version ultérieure avec le modèle d'IA intégré disponible. Si l'IA sur l'appareil n'est pas disponible, l'extension affiche tout de même le texte de la politique et un lien, pour que vous obteniez toujours quelque chose d'utile.
+
+Créé par Rumbo Labs — https://rumbolabs.net/
+```
+
 ## Single purpose (required)
 
 ```
